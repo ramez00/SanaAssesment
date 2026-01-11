@@ -1,0 +1,10 @@
+[INFO] 2026-01-10 18:46:36 - Starting to Get Data.
+[INFO] 2026-01-10 18:46:36 - Reading data from file.
+[INFO] 2026-01-10 18:46:36 - Successfully retrieved => 5 lines.
+[INFO] 2026-01-10 18:46:36 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-10 18:46:36 - Data cached successfully.
+[INFO] 2026-01-10 18:46:41 - Starting to Get Data.
+[INFO] 2026-01-10 18:46:41 - Reading data from file.
+[INFO] 2026-01-10 18:46:41 - Successfully retrieved => 5 lines.
+[INFO] 2026-01-10 18:46:41 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-10 18:46:41 - Data cached successfully.
