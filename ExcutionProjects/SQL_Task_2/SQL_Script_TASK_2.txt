@@ -1,0 +1,91 @@
+﻿
+CREATE TABLE [dbo].[Purchases]( 
+       [WebsiteId] [nvarchar](50) NOT NULL, 
+       [ProductId] [nvarchar](50) NOT NULL, 
+       [UnitOfMeasureId] [nvarchar](50) NOT NULL, 
+       [PurchaseStatus] [nvarchar](50) NOT NULL, 
+CONSTRAINT [PK_Purchases] PRIMARY KEY CLUSTERED  
+( 
+       [WebsiteId] ASC, 
+       [ProductId] ASC, 
+       [UnitOfMeasureId] ASC 
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, 
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON 
+[PRIMARY] 
+) ON [PRIMARY] 
+GO ----------------- 
+CREATE TABLE [dbo].[PurchasesSnapshot]( 
+       [WebsiteId] [nvarchar](50) NOT NULL, 
+       [ProductId] [nvarchar](50) NOT NULL, 
+       [UnitOfMeasureId] [nvarchar](50) NOT NULL, 
+       [PurchaseStatus] [nvarchar](50) NOT NULL, 
+       [ProcessingDate] [datetime] NOT NULL, 
+CONSTRAINT [PK_PurchasesSnapshot] PRIMARY KEY CLUSTERED  
+( 
+       [WebsiteId] ASC, 
+       [ProductId] ASC, 
+       [UnitOfMeasureId] ASC 
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, 
+ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON 
+[PRIMARY] 
+) ON [PRIMARY] 
+GO ----------------- 
+INSERT [dbo].[Purchases] ([WebsiteId], [ProductId], [UnitOfMeasureId], 
+[PurchaseStatus]) VALUES (N'Store1', N'Apples', N'Box', N'InProgress') 
+GO 
+INSERT [dbo].[Purchases] ([WebsiteId], [ProductId], [UnitOfMeasureId], 
+[PurchaseStatus]) VALUES (N'Store1', N'Apples', N'Piece', N'Paid') 
+GO 
+INSERT [dbo].[Purchases] ([WebsiteId], [ProductId], [UnitOfMeasureId], 
+[PurchaseStatus]) VALUES (N'Store1', N'Bicycle', N'Piece', N'Paid') 
+GO 
+INSERT [dbo].[Purchases] ([WebsiteId], [ProductId], [UnitOfMeasureId], 
+[PurchaseStatus]) VALUES (N'Store2', N'Apples', N'Piece', N'InProgress') 
+GO 
+INSERT [dbo].[Purchases] ([WebsiteId], [ProductId], [UnitOfMeasureId], 
+[PurchaseStatus]) VALUES (N'Store2', N'Carrots', N'Box', N'Paid') 
+GO 
+INSERT [dbo].[PurchasesSnapshot] ([WebsiteId], [ProductId], [UnitOfMeasureId], 
+[PurchaseStatus], [ProcessingDate]) VALUES (N'Store1', N'Apples', N'Box', 
+N'InProgress', CAST(N'2025-04-15T11:40:18.327' AS DateTime)) 
+GO 
+INSERT [dbo].[PurchasesSnapshot] ([WebsiteId], [ProductId], [UnitOfMeasureId], 
+[PurchaseStatus], [ProcessingDate]) VALUES (N'Store1', N'Bicycle', N'Piece', N'Paid', 
+CAST(N'2025-04-15T11:40:18.327' AS DateTime)) 
+GO 
+INSERT [dbo].[PurchasesSnapshot] ([WebsiteId], [ProductId], [UnitOfMeasureId], 
+[PurchaseStatus], [ProcessingDate]) VALUES (N'Store2', N'Apples', N'Piece', 
+N'InProgress', CAST(N'2025-04-15T11:40:18.327' AS DateTime)) 
+GO
+
+select top 100 * from Purchases with(nolock)
+
+
+select top 100 * from PurchasesSnapshot with(nolock)
+
+update PurchasesSnapshot 
+set PurchaseStatus = 'Failed' 
+where WebsiteId = 'Store2'
+
+Insert into PurchasesSnapshot (WebsiteId,ProductId,UnitOfMeasureId,PurchaseStatus,ProcessingDate)
+select p.WebsiteId , p.ProductId, p.UnitOfMeasureId,p.PurchaseStatus,GETDATE() as ProcessingDate from Purchases as p 
+left outer join PurchasesSnapshot as ps 
+on p.ProductId = ps.ProductId 
+and p.WebsiteId = ps.WebsiteId
+and p.UnitOfMeasureId = ps.UnitOfMeasureId
+where  ps.ProductId is null
+
+UPDATE ps
+SET ps.PurchaseStatus = p.PurchaseStatus
+FROM PurchasesSnapshot ps
+LEFT JOIN Purchases p ON p.ProductId = ps.ProductId
+   AND p.WebsiteId = ps.WebsiteId
+   AND p.UnitOfMeasureId = ps.UnitOfMeasureId
+WHERE p.PurchaseStatus IS NOT NULL
+  AND p.PurchaseStatus <> ps.PurchaseStatus;
+
+  
+select top 100 * from Purchases with(nolock)
+
+
+select top 100 * from PurchasesSnapshot with(nolock)

@@ -2,7 +2,7 @@
 using Cache_Implementation_Task4.Requests;
 using Cache_Implementation_Task4.Services;
 
-var cacheCapacity = 3;
+var cacheCapacity = 5;
 var client = new JsonPlaceholderClient();
 var cache = new InMemoryCache<int, Post>(cacheCapacity);
 var postService = new PostRequest(client, cache);
