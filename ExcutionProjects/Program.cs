@@ -22,7 +22,7 @@ try
 {
     Console.WriteLine("First Call Fetching Data...");
 
-    var myData = dataService.GetData();
+    var myData = dataService.GetDataAsync();
 
     foreach (var line in myData)
         Console.WriteLine(line);
@@ -30,7 +30,7 @@ try
 
     Console.WriteLine("\n Second Call Fetching Data...");
 
-    var cachedData = dataService.GetData();
+    var cachedData = dataService.GetDataAsync();
     
     foreach (var line in cachedData)
         Console.WriteLine(line);
@@ -53,7 +53,7 @@ try
                     ContsantsVariables.SQLScriptFilePath
         );
 
-    var SqlScript = serviceProvider2.GetData();
+    var SqlScript = serviceProvider2.GetDataAsync();
 
     Console.WriteLine("Show SQL Script...");
 

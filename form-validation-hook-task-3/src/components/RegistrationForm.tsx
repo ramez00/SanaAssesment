@@ -38,21 +38,20 @@ const RegistrationForm: React.FC = () => {
       required('Password is required'),
       minLength(8, 'Password must be at least 8 characters'),
     ],
-    confirmPassword: [
-      required('Please confirm your password'),
-      // Custom validator that checks if passwords match
-      (value: string) => {
-        // We need to access the password value from the form
-        // This is done inline since we have access to the values
-        return value !== fields.password.value && fields.password.value !== ''
-          ? 'Passwords do not match'
-          : null;
-      },
-    ],
+      confirmPassword: [
+          required('Please confirm your password'),
+          (value: string, fields: any) => {
+              return value !== fields.password.value && fields.password.value !== ''
+                  ? 'Passwords do not match'
+                  : null;
+          },
+      ],
+
+
     bio: [
       maxLength(200, 'Bio cannot exceed 200 characters'),
     ],
-  });
+           });
 
   /**
    * Handle form submission

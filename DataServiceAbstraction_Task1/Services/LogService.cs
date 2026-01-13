@@ -10,10 +10,12 @@ namespace DataServiceAbstraction_Task1.Services;
 public class LogService : ILogger
 {
     private readonly string _logFilePath;
+    private readonly object _lock;
 
     public LogService()
     {
         _logFilePath = ContsantsVariables.LogFilePath;
+        _lock = new object();
     }
 
     public void LogInformation(string message)
@@ -51,12 +53,21 @@ public class LogService : ILogger
         {
             using (var writer = new StreamWriter(_logFilePath, true))
             {
-                writer.WriteLine(logEntry);
+                lock (_lock)
+                {
+                    writer.WriteLine(logEntry);
+
+                }
             }
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Failed to write log to file: {ex.Message}");
         }
+    }
+
+    public void LogDataBass(string message)
+    {
+        // logic to log in Db or any other storage
     }
 }

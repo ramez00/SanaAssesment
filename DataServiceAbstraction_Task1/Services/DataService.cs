@@ -23,7 +23,7 @@ public class DataService : IDataService
         _cacheService = cacheService;
         _logger = logger;
     }
-    public IEnumerable<string> GetData()
+    public IEnumerable<string> GetDataAsync()
     {
         try
         {
@@ -47,6 +47,22 @@ public class DataService : IDataService
 
             var data = File.ReadAllLines(_filePath);
 
+            // if i have billion of data 
+            //await foreach (var line in File.ReadLinesAsync(_filePath))
+            //{
+            //    ProcessLine(line);
+            //}
+
+            // OR Use StreamReader for large files
+            using var reader2 = new StreamReader(_filePath);
+
+            string? newline;
+            while ((newline = reader.ReadLine()) != null)
+            {
+                ProcessLine(newline);
+            }
+
+
             _logger.LogInformation($"Successfully retrieved => {data.Count()} lines.");
 
             _cacheService.Set(_dataCachedKey, data,_duration);
@@ -59,5 +75,11 @@ public class DataService : IDataService
             _logger.LogError("Error occurred while getting data: " , exp);
             throw;
         }
+    }
+
+    void ProcessLine(string line)
+    {
+        // Example: print
+        Console.WriteLine(line);
     }
 }

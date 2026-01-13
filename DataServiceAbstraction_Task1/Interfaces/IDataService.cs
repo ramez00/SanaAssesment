@@ -7,5 +7,5 @@ using System.Threading.Tasks;
 namespace DataServiceAbstraction_Task1.Interfaces;
 public interface IDataService
 {
-    IEnumerable<string> GetData();
+    IEnumerable<string> GetDataAsync();
 }

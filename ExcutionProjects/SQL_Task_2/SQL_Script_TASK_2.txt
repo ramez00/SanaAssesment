@@ -84,6 +84,20 @@ LEFT JOIN Purchases p ON p.ProductId = ps.ProductId
 WHERE p.PurchaseStatus IS NOT NULL
   AND p.PurchaseStatus <> ps.PurchaseStatus;
 
+
+  -- you CAN USE AT MERGE STATEMENT AS WELL
+
+  MERGE INTO PurchasesSnapshot AS ps
+    USING Purchases AS p
+        ON ps.ProductId = p.ProductId
+        AND ps.WebsiteId = p.WebsiteId
+        AND ps.UnitOfMeasureId = p.UnitOfMeasureId
+    WHEN MATCHED AND ps.PurchaseStatus <> p.PurchaseStatus THEN
+        UPDATE SET ps.PurchaseStatus = p.PurchaseStatus
+    WHEN NOT MATCHED BY TARGET THEN
+        INSERT (WebsiteId, ProductId, UnitOfMeasureId, PurchaseStatus, ProcessingDate)
+        VALUES (p.WebsiteId, p.ProductId, p.UnitOfMeasureId, p.PurchaseStatus, GETDATE());
+
   
 select top 100 * from Purchases with(nolock)
 

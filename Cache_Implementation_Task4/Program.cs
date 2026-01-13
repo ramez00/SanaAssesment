@@ -2,9 +2,19 @@
 using Cache_Implementation_Task4.Requests;
 using Cache_Implementation_Task4.Services;
 using Cache_Implementation_Task4.Helper;
+using Microsoft.Extensions.DependencyInjection;
+
+var service = new ServiceCollection();
+service.AddHttpClient();
+service.AddTransient<fakestoreClient>();
+
+var serviceProvider = service.BuildServiceProvider();
+
+var factory = serviceProvider.GetRequiredService<IHttpClientFactory>();
+
 
 var cacheCapacity = 5;
-var client = new fakestoreClient();
+var client = new fakestoreClient(factory);
 var cache = new InMemoryCache<int, Post>(cacheCapacity);
 var postService = new PostRequest(client, cache);
 
