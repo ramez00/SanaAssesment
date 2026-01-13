@@ -8,3 +8,114 @@
 [INFO] 2026-01-10 18:46:41 - Successfully retrieved => 5 lines.
 [INFO] 2026-01-10 18:46:41 - Setting item in cache with key: service_cached_key for duration: 00:30:00
 [INFO] 2026-01-10 18:46:41 - Data cached successfully.
+[INFO] 2026-01-13 07:38:37 - Starting to Get Data.
+[INFO] 2026-01-13 07:38:37 - Reading data from file.
+[INFO] 2026-01-13 07:38:37 - Successfully retrieved => 5 lines.
+[INFO] 2026-01-13 07:38:37 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 07:38:37 - Data cached successfully.
+[INFO] 2026-01-13 07:43:36 - Starting to Get Data.
+[INFO] 2026-01-13 07:43:36 - Reading data from file.
+[INFO] 2026-01-13 07:43:36 - Successfully retrieved => 5 lines.
+[INFO] 2026-01-13 07:43:36 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 07:43:36 - Data cached successfully.
+[INFO] 2026-01-13 07:53:20 - Starting to Get Data.
+[INFO] 2026-01-13 07:53:20 - Reading data from file.
+[INFO] 2026-01-13 07:53:20 - Successfully retrieved => 5 lines.
+[INFO] 2026-01-13 07:53:20 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 07:53:20 - Data cached successfully.
+[INFO] 2026-01-13 07:53:20 - Starting to Get Data.
+[INFO] 2026-01-13 07:53:20 - Data retrieved from cache.
+[INFO] 2026-01-13 07:59:00 - Starting to Get Data.
+[INFO] 2026-01-13 07:59:00 - Reading data from file.
+[INFO] 2026-01-13 07:59:00 - Successfully retrieved => 7 lines.
+[INFO] 2026-01-13 07:59:00 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 07:59:00 - Data cached successfully.
+[INFO] 2026-01-13 07:59:00 - Starting to Get Data.
+[INFO] 2026-01-13 07:59:00 - Data retrieved from cache.
+[INFO] 2026-01-13 08:29:46 - Starting to Get Data.
+[INFO] 2026-01-13 08:29:46 - Reading data from file.
+[INFO] 2026-01-13 08:29:46 - Successfully retrieved => 7 lines.
+[INFO] 2026-01-13 08:29:46 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 08:29:46 - Data cached successfully.
+[INFO] 2026-01-13 08:29:46 - Starting to Get Data.
+[INFO] 2026-01-13 08:29:46 - Data retrieved from cache.
+[INFO] 2026-01-13 08:35:18 - Starting to Get Data.
+[INFO] 2026-01-13 08:35:18 - Reading data from file.
+[INFO] 2026-01-13 08:35:18 - Successfully retrieved => 7 lines.
+[INFO] 2026-01-13 08:35:18 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 08:35:18 - Data cached successfully.
+[INFO] 2026-01-13 08:35:18 - Starting to Get Data.
+[INFO] 2026-01-13 08:35:18 - Data retrieved from cache.
+[INFO] 2026-01-13 08:35:58 - Starting to Get Data.
+[INFO] 2026-01-13 08:35:59 - Reading data from file.
+[INFO] 2026-01-13 08:35:59 - Successfully retrieved => 7 lines.
+[INFO] 2026-01-13 08:35:59 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 08:35:59 - Data cached successfully.
+[INFO] 2026-01-13 08:35:59 - Starting to Get Data.
+[INFO] 2026-01-13 08:35:59 - Data retrieved from cache.
+[INFO] 2026-01-13 08:54:36 - Starting to Get Data.
+[INFO] 2026-01-13 08:54:36 - Reading data from file.
+[INFO] 2026-01-13 08:54:36 - Successfully retrieved => 7 lines.
+[INFO] 2026-01-13 08:54:36 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 08:54:36 - Data cached successfully.
+[INFO] 2026-01-13 08:54:36 - Starting to Get Data.
+[INFO] 2026-01-13 08:54:36 - Data retrieved from cache.
+[INFO] 2026-01-13 08:54:36 - Starting to Get Data.
+[INFO] 2026-01-13 08:54:36 - Data retrieved from cache.
+[INFO] 2026-01-13 08:55:17 - Starting to Get Data.
+[INFO] 2026-01-13 08:55:17 - Reading data from file.
+[INFO] 2026-01-13 08:55:17 - Successfully retrieved => 7 lines.
+[INFO] 2026-01-13 08:55:17 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 08:55:17 - Data cached successfully.
+[INFO] 2026-01-13 08:55:17 - Starting to Get Data.
+[INFO] 2026-01-13 08:55:17 - Data retrieved from cache.
+[INFO] 2026-01-13 08:55:25 - Starting to Get Data.
+[INFO] 2026-01-13 08:55:25 - Data retrieved from cache.
+[INFO] 2026-01-13 08:56:03 - Starting to Get Data.
+[INFO] 2026-01-13 08:56:03 - Reading data from file.
+[INFO] 2026-01-13 08:56:03 - Successfully retrieved => 7 lines.
+[INFO] 2026-01-13 08:56:03 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 08:56:03 - Data cached successfully.
+[INFO] 2026-01-13 08:56:03 - Starting to Get Data.
+[INFO] 2026-01-13 08:56:03 - Data retrieved from cache.
+[INFO] 2026-01-13 08:56:03 - Starting to Get Data.
+[INFO] 2026-01-13 08:56:03 - Data retrieved from cache.
+[INFO] 2026-01-13 09:00:08 - Starting to Get Data.
+[INFO] 2026-01-13 09:00:08 - Reading data from file.
+[INFO] 2026-01-13 09:00:08 - Successfully retrieved => 7 lines.
+[INFO] 2026-01-13 09:00:08 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 09:00:08 - Data cached successfully.
+[INFO] 2026-01-13 09:00:08 - Starting to Get Data.
+[INFO] 2026-01-13 09:00:08 - Data retrieved from cache.
+[INFO] 2026-01-13 09:00:08 - Removing item from cache with key: service_cached_key
+[INFO] 2026-01-13 09:00:08 - Starting to Get Data.
+[INFO] 2026-01-13 09:00:08 - Reading data from file.
+[INFO] 2026-01-13 09:00:08 - Successfully retrieved => 91 lines.
+[INFO] 2026-01-13 09:00:08 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 09:00:08 - Data cached successfully.
+[INFO] 2026-01-13 09:02:03 - Starting to Get Data.
+[INFO] 2026-01-13 09:02:03 - Reading data from file.
+[INFO] 2026-01-13 09:02:03 - Successfully retrieved => 7 lines.
+[INFO] 2026-01-13 09:02:03 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 09:02:03 - Data cached successfully.
+[INFO] 2026-01-13 09:02:03 - Starting to Get Data.
+[INFO] 2026-01-13 09:02:03 - Data retrieved from cache.
+[INFO] 2026-01-13 09:02:03 - Removing item from cache with key: service_cached_key
+[INFO] 2026-01-13 09:02:03 - Starting to Get Data.
+[INFO] 2026-01-13 09:02:03 - Reading data from file.
+[INFO] 2026-01-13 09:02:03 - Successfully retrieved => 91 lines.
+[INFO] 2026-01-13 09:02:03 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 09:02:03 - Data cached successfully.
+[INFO] 2026-01-13 09:03:30 - Starting to Get Data.
+[INFO] 2026-01-13 09:03:30 - Reading data from file.
+[INFO] 2026-01-13 09:03:30 - Successfully retrieved => 7 lines.
+[INFO] 2026-01-13 09:03:30 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 09:03:30 - Data cached successfully.
+[INFO] 2026-01-13 09:03:30 - Starting to Get Data.
+[INFO] 2026-01-13 09:03:30 - Data retrieved from cache.
+[INFO] 2026-01-13 09:03:30 - Removing item from cache with key: service_cached_key
+[INFO] 2026-01-13 09:03:30 - Starting to Get Data.
+[INFO] 2026-01-13 09:03:30 - Reading data from file.
+[INFO] 2026-01-13 09:03:30 - Successfully retrieved => 91 lines.
+[INFO] 2026-01-13 09:03:30 - Setting item in cache with key: service_cached_key for duration: 00:30:00
+[INFO] 2026-01-13 09:03:30 - Data cached successfully.

@@ -3,11 +3,11 @@ using Cache_Implementation_Task4.DTOs;
 using System.Text.Json;
 
 namespace Cache_Implementation_Task4.Requests;
-public class JsonPlaceholderClient
+public class fakestoreClient
 {
     private readonly HttpClient _httpClient;
 
-    public JsonPlaceholderClient(HttpClient? httpClient = null)
+    public fakestoreClient(HttpClient? httpClient = null)
     {
         _httpClient = httpClient ?? new HttpClient
         {

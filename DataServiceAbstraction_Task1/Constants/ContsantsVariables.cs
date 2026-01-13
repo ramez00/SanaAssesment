@@ -11,6 +11,8 @@ public static class ContsantsVariables
 
     public const string LogFilePath = @"D:\Sana Assesment\SanaAssesment\logs.txt";
 
+    public const string SQLScriptFilePath = @"D:\Sana Assesment\SanaAssesment\SQL_Script_TASK_2.txt";
+
     public const string DataCachedKey = "service_cached_key";
 
     public const int CahedDuration = 30;

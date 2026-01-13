@@ -15,9 +15,9 @@ public class DataService : IDataService
     private readonly string _dataCachedKey;
     private readonly TimeSpan _duration;
 
-    public DataService(ICacheService cacheService,ILogger logger)
+    public DataService(ICacheService cacheService,ILogger logger,string? filePath=null)
     {
-        _filePath = Constants.ContsantsVariables.DataFilePath;
+        _filePath = filePath ?? Constants.ContsantsVariables.DataFilePath;
         _dataCachedKey = Constants.ContsantsVariables.DataCachedKey;
         _duration = TimeSpan.FromMinutes(Constants.ContsantsVariables.CahedDuration);
         _cacheService = cacheService;

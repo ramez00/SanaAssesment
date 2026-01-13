@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cache_Implementation_Task4"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "form-validation-hook-task-3", "form-validation-hook-task-3\form-validation-hook-task-3.esproj", "{03940CB2-02A4-41FE-A720-6A857D600534}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cache_Implementation_Tests", "EvictionPolicyTests\Cache_Implementation_Tests.csproj", "{B0DC5D35-FA2D-444A-85FB-089E6EB79DD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{03940CB2-02A4-41FE-A720-6A857D600534}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03940CB2-02A4-41FE-A720-6A857D600534}.Release|Any CPU.Build.0 = Release|Any CPU
 		{03940CB2-02A4-41FE-A720-6A857D600534}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{B0DC5D35-FA2D-444A-85FB-089E6EB79DD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0DC5D35-FA2D-444A-85FB-089E6EB79DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0DC5D35-FA2D-444A-85FB-089E6EB79DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0DC5D35-FA2D-444A-85FB-089E6EB79DD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

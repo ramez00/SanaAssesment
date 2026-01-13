@@ -5,10 +5,10 @@ namespace Cache_Implementation_Task4.Requests;
 
 public class PostRequest
 {
-    private readonly JsonPlaceholderClient _client;
+    private readonly fakestoreClient _client;
     private readonly ICache<int,Post> _cache;
 
-    public PostRequest(JsonPlaceholderClient client, ICache<int, Post> cache)
+    public PostRequest(fakestoreClient client, ICache<int, Post> cache)
     {
         _client = client;
         _cache = cache;

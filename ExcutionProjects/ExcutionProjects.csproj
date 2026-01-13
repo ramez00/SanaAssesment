@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Cache_Implementation_Task4\Cache_Implementation_Task4.csproj" />
     <ProjectReference Include="..\DataServiceAbstraction_Task1\DataServiceAbstraction_Task1.csproj" />
   </ItemGroup>
 
